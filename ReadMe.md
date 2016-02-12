@@ -1,4 +1,4 @@
-#TTBaseHost
+#TTBbridge
 
 64ビットの TTBase 互換アプリケーションで 32ビットのプラグインを動作させようとする試みです。  
 **Visual Studio Community 2015 (C++11, 32/64-bit)** でコンパイルを確認しています。
@@ -7,42 +7,42 @@
 
 ---
 
-- TTBaseBridge.sln
-- BridgeData.hpp
-- x86.manifest
-- amd64.manifest
-- NYSL
-- [TTBbridge]
- - TTBbridge.vcxproj
- - TTBbridge.vcxproj.filters
- - TTBbridge.vcxproj.users
- - WinMain.cpp
- - TTBasePluginAdapter.hpp
- - Utility.hpp
- - [include]
-  - File.hpp
-  - GenerateUUIDString.hpp
-  - Transcode.hpp
- - [TTBase]
-  - Plugin.hpp
-- [TTBMiniHost]
- - TTBMiniHost.vcxproj
- - TTBMiniHost.vcxproj.filters
- - TTBMiniHost.vcxproj.users
- - WinMain.cpp
- - TestWnd.hpp
- - TTBBridgePlugin.hpp
- - Utility.hpp
- - [include]
-  - Application.hpp
-  - CtrlWnd.hpp
-  - File.hpp
-  - Font.hpp
-  - GenerateUUIDString.hpp
-  - UWnd.hpp
-  - UWnd.cpp
- - [TTBase]
-  - Plugin.hpp
+• TTBaseBridge.sln  
+• BridgeData.hpp  
+• x86.manifest  
+• amd64.manifest  
+• NYSL  
+‣ [TTBbridge]  
+　◦ TTBbridge.vcxproj  
+　◦ TTBbridge.vcxproj.filters  
+　◦ TTBbridge.vcxproj.users  
+　◦ WinMain.cpp  
+　◦ TTBasePluginAdapter.hpp  
+　◦ Utility.hpp  
+　‣ [include]  
+　　◦ File.hpp  
+　　◦ GenerateUUIDString.hpp  
+　　◦ Transcode.hpp  
+　‣ [TTBase]  
+　　◦ Plugin.hpp  
+‣ [TTBMiniHost]  
+　◦ TTBMiniHost.vcxproj  
+　◦ TTBMiniHost.vcxproj.filters  
+　◦ TTBMiniHost.vcxproj.users  
+　◦ WinMain.cpp  
+　◦ TestWnd.hpp  
+　◦ TTBBridgePlugin.hpp  
+　◦ Utility.hpp  
+　‣ [include]  
+　　◦ Application.hpp  
+　　◦ CtrlWnd.hpp  
+　　◦ File.hpp  
+　　◦ Font.hpp  
+　　◦ GenerateUUIDString.hpp  
+　　◦ UWnd.hpp  
+　　◦ UWnd.cpp  
+　‣ [TTBase]  
+　　◦ Plugin.hpp  
 
 ---
 
@@ -53,7 +53,7 @@
 　ビット数の境界を超えるためのブリッジアプリケーションです。  
 　プラグイン一つにつき、一つのインスタンスが立ち上がります。また、通信用の共有メモリとして、インスタンス一つにつき 少なくとも 160 バイトを消費します。  
 
-##TTBMiniHost
+###TTBMiniHost
 　動作確認のためのミニプログラムです。プラグインの読み込み、解放、コマンドの実行が行えます。  
 　同時に読み込めるプラグインは一つだけです。
 
