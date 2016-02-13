@@ -7,50 +7,51 @@
 
 ---
 
-• TTBaseBridge.sln  
-• BridgeData.hpp  
-• x86.manifest  
-• amd64.manifest  
-• NYSL  
-‣ [TTBbridge]  
-　◦ TTBbridge.vcxproj  
-　◦ TTBbridge.vcxproj.filters  
-　◦ TTBbridge.vcxproj.users  
-　◦ WinMain.cpp  
-　◦ TTBasePluginAdapter.hpp  
-　◦ Utility.hpp  
-　‣ [include]  
-　　◦ File.hpp  
-　　◦ GenerateUUIDString.hpp  
-　　◦ Transcode.hpp  
-　‣ [TTBase]  
-　　◦ Plugin.hpp  
-‣ [TTBMiniHost]  
-　◦ TTBMiniHost.vcxproj  
-　◦ TTBMiniHost.vcxproj.filters  
-　◦ TTBMiniHost.vcxproj.users  
-　◦ WinMain.cpp  
-　◦ TestWnd.hpp  
-　◦ TTBBridgePlugin.hpp  
-　◦ Utility.hpp  
-　‣ [include]  
-　　◦ Application.hpp  
-　　◦ CtrlWnd.hpp  
-　　◦ File.hpp  
-　　◦ Font.hpp  
-　　◦ GenerateUUIDString.hpp  
-　　◦ UWnd.hpp  
-　　◦ UWnd.cpp  
-　‣ [TTBase]  
-　　◦ Plugin.hpp  
+**TTBbridge**  
+├─ TTBaseBridge.sln  
+├─ BridgeData.hpp  
+├─ x86.manifest  
+├─ amd64.manifest  
+├─ NYSL  
+├─ **TTBbridge**  
+│　　├─ TTBbridge.vcxproj  
+│　　├─ TTBbridge.vcxproj.filters  
+│　　├─ TTBbridge.vcxproj.users  
+│　　├─ WinMain.cpp  
+│　　├─ TTBasePluginAdapter.hpp  
+│　　├─ Utility.hpp  
+│　　├─ **include**  
+│　　│　　├─ File.hpp  
+│　　│　　├─ GenerateUUIDString.hpp  
+│　　│　　└─ Transcode.hpp  
+│　　└─ **TTBase**  
+│　　　　　└─Plugin.hpp  
+└─ **TTBMiniHost**  
+　　　├─ TTBMiniHost.vcxproj  
+　　　├─ TTBMiniHost.vcxproj.filters  
+　　　├─ TTBMiniHost.vcxproj.users  
+　　　├─ WinMain.cpp  
+　　　├─ TestWnd.hpp  
+　　　├─ TTBBridgePlugin.hpp  
+　　　├─ Utility.hpp  
+　　　├─ **include**  
+　　　│　　├─ Application.hpp  
+　　　│　　├─ CtrlWnd.hpp  
+　　　│　　├─ File.hpp  
+　　　│　　├─ Font.hpp  
+　　　│　　├─ GenerateUUIDString.hpp  
+　　　│　　├─ UWnd.hpp  
+　　　│　　└─ UWnd.cpp  
+　　　└─ **TTBase**  
+　　　　 　└─ Plugin.hpp  
 
 ---
 
 ##説明
-　プロセス間通信の技術を使って、64ビットのホストから32ビットのプラグインを読み込み、実行します。  
+　プロセス間通信の技術を使って、64ビットのホストから32ビットの TTBase プラグインを読み込み、実行します。  
 
 ###TTBbridge
-　ビット数の境界を超えるためのブリッジアプリケーションです。  
+　ビット数の境界を超えるためのブリッヂアプリケーションです。  
 　プラグイン一つにつき、一つのインスタンスが立ち上がります。また、通信用の共有メモリとして、インスタンス一つにつき 少なくとも 160 バイトを消費します。  
 
 ###TTBMiniHost
@@ -61,6 +62,7 @@
 　ホスト側は立ち上がると、まず通信用の共有メモリを作成します。共有メモリのレイアウトは以下の様になっています：  
 
 ####共有メモリのレイアウト
+
 |　_offset_　|　_content_　|　_bytes_　|  
 |:-:|:-|:-:|  
 |　0　|　命令用 共有メモリ名　|　80　|  
