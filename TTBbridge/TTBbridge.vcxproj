@@ -157,8 +157,12 @@
     <ClInclude Include="include\File.hpp" />
     <ClInclude Include="include\GenerateUUIDString.hpp" />
     <ClInclude Include="include\Transcode.hpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="TTBasePluginAdapter.hpp" />
     <ClInclude Include="Utility.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TTBbridge.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -164,10 +164,14 @@
     <ClInclude Include="include\Font.hpp" />
     <ClInclude Include="include\GenerateUUIDString.hpp" />
     <ClInclude Include="include\UWnd.hpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="TestWnd.hpp" />
     <ClInclude Include="TTBBridgePlugin.hpp" />
     <ClInclude Include="TTBase\Plugin.hpp" />
     <ClInclude Include="Utility.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TTBMiniHost.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
